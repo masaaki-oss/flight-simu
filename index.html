@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Flight Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hud-header">
+      <h1>ブラウザ・フライトシミュレーター</h1>
+      <p>
+        キー操作: W/S=ピッチ, A/D=ロール, Q/E=ヨー, R/F=スロットル, Space=ブレーキ
+      </p>
+    </header>
+    <main>
+      <canvas id="simulator" width="1280" height="720" aria-label="Flight simulator canvas"></canvas>
+      <section class="readout" aria-live="polite">
+        <div><span>速度</span><strong id="speed">0</strong> kt</div>
+        <div><span>高度</span><strong id="altitude">0</strong> ft</div>
+        <div><span>上昇率</span><strong id="verticalSpeed">0</strong> fpm</div>
+        <div><span>スロットル</span><strong id="throttle">0</strong> %</div>
+        <div><span>ピッチ</span><strong id="pitch">0</strong> °</div>
+        <div><span>ロール</span><strong id="roll">0</strong> °</div>
+        <div><span>ヨー</span><strong id="yaw">0</strong> °</div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        ローカル実行: <code>python -m http.server</code> などで起動し、ブラウザで
+        <code>http://localhost:8000</code> を開いてください。
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
